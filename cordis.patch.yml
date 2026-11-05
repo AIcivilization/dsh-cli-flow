@@ -1,0 +1,5 @@
+- insert:
+    - id: dsh-cli
+      name: dsh-cli
+    - id: dsh-cli-flow
+      name: dsh-cli-flow

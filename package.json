@@ -1,0 +1,65 @@
+{
+  "name": "dsh-cli-flow",
+  "version": "0.1.0",
+  "description": "Flows for DeepSeek Harness on top of dsh-cli: every step is a standalone card where you pick, compare and swap AI tools, export any time, or let the AI operate it.",
+  "keywords": [
+    "dsh-plugin",
+    "dsh-plugins",
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "workflow"
+  ],
+  "license": "MIT",
+  "author": "AIcivilization",
+  "homepage": "https://github.com/AIcivilization/dsh-cli-flow#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AIcivilization/dsh-cli-flow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AIcivilization/dsh-cli-flow/issues"
+  },
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./packs": {
+      "default": "./lib/packs.js"
+    },
+    "./media": {
+      "default": "./lib/media.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**",
+    "scenes/**",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=22.13",
+    "dsh": ">=0.2.0-0 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "dsh-cli": "^0.1.0"
+  }
+}
